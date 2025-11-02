@@ -1,4 +1,5 @@
-#Library Booking System
+# 📚 Library Booking System
+
 A **Flask-based web application** that allows users to **search, reserve, and manage library books** easily.
 Librarians can manage the catalog by adding or removing books, while readers can browse available titles and make bookings.
 
