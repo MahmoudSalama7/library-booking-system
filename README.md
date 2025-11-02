@@ -55,7 +55,7 @@ library-booking-system/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/library-booking-system.git
+git clone https://github.com/MahmoudSalama7/library-booking-system.git
 cd library-booking-system
 ```
 
