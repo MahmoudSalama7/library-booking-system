@@ -1,0 +1,20 @@
+@'
+{% extends "base.html" %}
+{% block content %}
+<h2>My Bookings</h2>
+{% if bookings|length > 0 %}
+    <ul>
+    {% for b in bookings %}
+        <li>
+            Book #{{ b.item_id }} 
+            → Ends: {{ b.end_time.strftime("%b %d, %Y at %I:%M %p") }}
+            <a href="/cancel/{{ b.id }}" 
+               onclick="return confirm('Cancel this booking?')">Cancel</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No active bookings. Go <a href="/search">search</a> for a book!</p>
+{% endif %}
+{% endblock %}
+'@ | Out-File -Encoding utf8 templates/history.html

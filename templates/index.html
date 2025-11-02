@@ -1,0 +1,14 @@
+@'
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to Library Booking System</h1>
+<p>Search, reserve, and manage books with ease.</p>
+<hr>
+<p>
+    <a href="/search" style="background:#4CAF50;color:#fff;padding:12px 24px;
+       text-decoration:none;border-radius:8px;font-size:18px">
+       Start Searching Books
+    </a>
+</p>
+{% endblock %}
+'@ | Out-File -Encoding utf8 templates/index.html

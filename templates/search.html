@@ -1,0 +1,37 @@
+@'
+{% extends "base.html" %}
+{% block content %}
+<h2>Search Books</h2>
+<form method="GET">
+    <input name="q" placeholder="Search title or author" value="{{ q or '' }}" style="width:70%; padding:10px; font-size:16px;">
+    <button type="submit" style="padding:10px 20px;">Search</button>
+</form>
+<hr>
+
+{% if results %}
+    <ul style="list-style:none; padding:0;">
+    {% for b in results %}
+        <li style="padding:12px; border-bottom:1px solid #eee;">
+            <strong style="font-size:18px;">{{ b.title }}</strong><br>
+            <em>by {{ b.author }}</em>
+
+            {% if b.available %}
+                {% if current_user.is_librarian() %}
+                    <span style="color:#999; font-style:italic;">(Librarians can't reserve)</span>
+                {% else %}
+                    <a href="/book/{{ b.id }}" 
+                       style="background:#4CAF50; color:white; padding:8px 16px; text-decoration:none; border-radius:5px; margin-left:20px;">
+                       Reserve Now
+                    </a>
+                {% endif %}
+            {% else %}
+                <span style="color:#c00; font-weight:bold;">Booked</span>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No books found. Ask a librarian to add some!</p>
+{% endif %}
+{% endblock %}
+'@ | Out-File -Encoding utf8 templates/search.html

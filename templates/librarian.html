@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Librarian Dashboard</h1>
+
+<h3>Add Book</h3>
+<form method="POST" action="{{ url_for('add_book') }}">
+    <input name="title" placeholder="Title" required>
+    <input name="author" placeholder="Author" required>
+    <button type="submit">Add</button>
+</form>
+
+<h3>Books</h3>
+<ul>
+{% for b in books %}
+    <li>{{ b.title }} by {{ b.author }}
+        <a href="{{ url_for('delete_book', id=b.id) }}" 
+           onclick="return confirm('Delete?')">❌</a>
+    </li>
+{% else %}
+    <li>No books yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}

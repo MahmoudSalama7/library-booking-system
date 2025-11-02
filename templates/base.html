@@ -1,0 +1,67 @@
+@'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Booking System</title>
+    <style>
+        body{font-family:Segoe UI;margin:0;background:#f4f6f9;color:#333}
+        .container{max-width:1000px;margin:20px auto;background:#fff;border-radius:12px;
+                   box-shadow:0 10px 30px rgba(0,0,0,.1);overflow:hidden}
+        nav{background:#2c3e50;padding:1rem 2rem;display:flex;gap:1.5rem;
+            flex-wrap:wrap;justify-content:center;align-items:center}
+        nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 16px;
+              border-radius:6px;transition:.3s}
+        nav a:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+        .content{padding:30px;min-height:70vh}
+        .flash {
+            padding: 14px 20px;
+            margin: 20px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            background: #ffebee;
+            color: #c62828;
+            border: 2px solid #ef5350;
+            box-shadow: 0 4px 10px rgba(198,40,40,0.2);
+        }
+        .flash.error{background:#f8d7da;color:#721c24;border:1px solid #f5c6cb}
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>
+        <b>Library</b>
+        <a href="/">Home</a>
+        <a href="/search">Search</a>
+
+        {% if current_user.is_authenticated %}
+            {% if not current_user.is_librarian() %}
+                <a href="/history">My Bookings</a>
+            {% endif %}
+            {% if current_user.is_librarian() %}
+                <a href="/librarian" style="background:#f1c40f;color:#000">Librarian Panel</a>
+            {% endif %}
+            <a href="/logout" style="background:#e74c3c">Logout ({{ current_user.username }})</a>
+        {% else %}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        {% endif %}
+    </nav>
+
+    <div class="content">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="flash">{{ msg }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </div>
+</div>
+</body>
+</html>
+'@ | Out-File -Encoding utf8 templates/base.html
