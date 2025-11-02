@@ -181,15 +181,15 @@ http://127.0.0.1:5000
 
 ---
 
-### Librarian View:
-<img width="1281" height="832" alt="image" src="https://github.com/user-attachments/assets/aa861c2f-c346-44a4-b6cb-92053165e201" /># 📚 Library Booking System
+## Librarian View:
+
 <img width="1317" height="850" alt="image" src="https://github.com/user-attachments/assets/97c204cd-afc7-4d26-a95b-fa902bda8145" />
 <img width="1297" height="842" alt="image" src="https://github.com/user-attachments/assets/a9007947-fac0-4fa7-ac60-5948af225042" />
 <img width="1281" height="832" alt="image" src="https://github.com/user-attachments/assets/828bd415-6f6b-448c-b579-e5543bd8eab6" />
 <img width="1296" height="843" alt="image" src="https://github.com/user-attachments/assets/e1ccbc12-1775-4fed-94ce-2d6ba27227cd" />
 <img width="1287" height="840" alt="image" src="https://github.com/user-attachments/assets/a0b7af4e-5027-49f2-8d49-750ad4406c29" />
 
-Reader View:
+## Reader View:
 <img width="1288" height="837" alt="image" src="https://github.com/user-attachments/assets/5008bce9-5f35-43e9-a5a9-f0828fc2d03c" />
 <img width="1307" height="845" alt="image" src="https://github.com/user-attachments/assets/18c3306b-a884-43fd-b517-b6283079022d" />
 
