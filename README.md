@@ -171,13 +171,6 @@ http://127.0.0.1:5000
 3. Commit your changes
 4. Push to your fork and submit a PR 🎉
 
----
-
-## 👤 Author
-
-**Mahmoud Salama**
-📧 [mahmoudsalamacs@gmail.com](mailto:mahmoudsalamacs@gmail.com)
-🔗 [LinkedIn](https://www.linkedin.com/in/mahmoud-salama-5a0525227/)
 
 ---
 
@@ -195,6 +188,15 @@ http://127.0.0.1:5000
 
 
 
+---
+
+## 👤 Author
+
+**Mahmoud Salama**
+📧 [mahmoudsalamacs@gmail.com](mailto:mahmoudsalamacs@gmail.com)
+🔗 [LinkedIn](https://www.linkedin.com/in/mahmoud-salama-5a0525227/)
+
+---
 
 ## 🪪 License
 
